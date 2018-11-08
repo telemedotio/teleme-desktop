@@ -3,7 +3,7 @@
   "window": {
     "title": "TeleMe Desktop",
     "width" : 788,
-    "height": 488,
+    "height": 388,
     "resizable" : false,
     "fullscreen" : false,
     "frame" : false,

@@ -90,8 +90,8 @@ notifyFailure = (msg)->
   if confirm(msg)
     setTimeout(main, 888)
   else
-    #App.quit()
-    window.close(true)
+    nw.App.quit()
+    #window.close(true)
   return
 
 $(document).ready ->
