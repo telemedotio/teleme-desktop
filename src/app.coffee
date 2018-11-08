@@ -49,9 +49,14 @@ openupTeleme = ->
     "height": 598,
     "min_width" : 518,
     "min_height" : 518,
+    "resizable" : true
+    "frame" : true
 
   nw.Window.open URL_TO_TELEME_WEB, options, (newWin)->
     newWin.on 'new-win-policy', (frame, url, policy)->
+
+      return if url.indexOf("oauth.telegram") > 0
+
       # do not open the window
       policy.ignore()
       # and open it in external browser
@@ -87,7 +92,7 @@ main = ->
 
 notifyFailure = (msg)->
   if confirm(msg)
-    setTimeout(mian, 188)
+    setTimeout(main, 888)
   else
     #App.quit()
     window.close(true)
