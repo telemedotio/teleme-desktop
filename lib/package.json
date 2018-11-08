@@ -6,6 +6,9 @@
     "height": 598,
     "min_width" : 518,
     "min_height" : 518,
+    "resizable" : false,
+    "fullscreen" : false,
+    "frame" : false,
     "toolbar": false
   },
   "version": "1.0.0",

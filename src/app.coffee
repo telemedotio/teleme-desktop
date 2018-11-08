@@ -25,7 +25,7 @@ fetchWithTimeout = (url)->
   Promise.race([
     fetch(url),
     new Promise((_, reject)->
-      setTimeout((()-> reject(new Error('Timeout'))), 5998)
+      setTimeout((()-> reject(new Error('Timeout'))), 8888)
     )
   ])
 
@@ -51,13 +51,19 @@ openupTeleme = ->
     "min_height" : 518,
 
   nw.Window.open URL_TO_TELEME_WEB, options, (newWin)->
+    newWin.on 'new-win-policy', (frame, url, policy)->
+      # do not open the window
+      policy.ignore()
+      # and open it in external browser
+      nw.Shell.openExternal(url)
+      return
+
     window.close(true)
     return
 
 logLineUp = (msg)-> EL_LABELUP.text(String(msg || ''))
 
 main = ->
-  reinstateNodes()
   logLineUp "connecting to the server..."
 
   doFetch URL_TO_TELEME_WEB, (err)->
@@ -83,13 +89,22 @@ notifyFailure = (msg)->
   if confirm(msg)
     setTimeout(mian, 188)
   else
-    App.quit()
+    #App.quit()
+    window.close(true)
   return
 
-$(document).ready main
+$(document).ready ->
+  reinstateNodes()
+  main()
 
+  nw.Window.get().on 'new-win-policy', (frame, url, policy)->
+    # do not open the window
+    policy.ignore()
+    # and open it in external browser
+    nw.Shell.openExternal(url)
+    return
 
-
+  return
 
 
 
