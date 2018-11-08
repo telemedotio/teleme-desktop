@@ -3,13 +3,24 @@
 STATE = 0
 
 EL_TITLE = null
+EL_SUB_TITLE = null
 EL_LABELUP = null
+EL_BTN_HELP = null
 
 LANGUAGE_CODE = "en"
 
-reinstateNodes = ->
+reinstateNodes = (callback)->
   EL_TITLE = $('#ELTitle')
+  EL_SUB_TITLE = $('#ELSubtitle')
   EL_LABELUP =  $('#ELLabelUp')
+  EL_BTN_HELP =  $('#ELHelpDesk')
+
+  EL_TITLE.fadeIn 'slow', ->
+    EL_SUB_TITLE.fadeIn 'slow', ->
+      EL_LABELUP.fadeIn('slow')
+      callback()
+      return
+    return
   return
 
 URL_TO_TELEME_WEB = "https://www.teleme.io/web?utm_source=teleme_desktop&utm_medium=referral&hl=#{LANGUAGE_CODE}&r=#{Date.now()}"
@@ -42,7 +53,7 @@ openupTeleme = ->
   options =
     "title": "TeleMe Desktop",
     "width" : 1118,
-    "height": 598,
+    "height": 888,
     "min_width" : 518,
     "min_height" : 518,
     "resizable" : true
@@ -89,14 +100,14 @@ main = ->
 notifyFailure = (msg)->
   if confirm(msg)
     setTimeout(main, 888)
+    EL_BTN_HELP.fadeIn('slow')
   else
     nw.App.quit()
     #window.close(true)
   return
 
 $(document).ready ->
-  reinstateNodes()
-  main()
+  reinstateNodes(main)
 
   nw.Window.get().on 'new-win-policy', (frame, url, policy)->
     # do not open the window
