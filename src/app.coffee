@@ -4,16 +4,12 @@ STATE = 0
 
 EL_TITLE = null
 EL_LABELUP = null
-EL_LABELDOWN = null
 
 LANGUAGE_CODE = "en"
 
 reinstateNodes = ->
   EL_TITLE = $('#ELTitle')
   EL_LABELUP =  $('#ELLabelUp')
-  EL_LABELDOWN =  $('#ELLabelDown')
-
-  EL_LABELUP.text(navigator.userAgent)
   return
 
 URL_TO_TELEME_WEB = "https://www.teleme.io/web?utm_source=teleme_desktop&utm_medium=referral&hl=#{LANGUAGE_CODE}&r=#{Date.now()}"
