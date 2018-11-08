@@ -1,0 +1,17 @@
+{
+  "name": "TeleMe Desktop",
+  "window": {
+    "title": "TeleMe Desktop",
+    "width" : 1118,
+    "height": 598,
+    "min_width" : 518,
+    "min_height" : 518,
+    "toolbar": false
+  },
+  "version": "1.0.0",
+  "description": "Desktop app for teleme.io - Telegram Community Management Tools",
+  "main": "index.html",
+  "user-agent":"%name %ver %osinfo %webkit_ver %chromium_ver %nwver",
+  "author": "teleme.io"
+}
+

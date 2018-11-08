@@ -1,0 +1,33 @@
+{
+  "name": "teleme-desktop",
+  "version": "1.0.0",
+  "description": "Desktop app for teleme.io - Telegram Community Management Tools, supports Windows, Mac and Linux",
+  "main": "main.js",
+  "scripts": {
+    "watch": "./node_modules/.bin/coffee -o ./lib/ -cw ./src/",
+    "pug": "./node_modules/.bin/pug src --out lib -w",
+    "start": "/Applications/nwjs.app/Contents/MacOS/nwjs ./lib/",
+    "start-electron": "node_modules/.bin/electron ./lib/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/telemedotio/teleme-desktop.git"
+  },
+  "keywords": [
+    "telegram",
+    "teleme",
+    "management"
+  ],
+  "author": "TeleMe.io",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/telemedotio/teleme-desktop/issues"
+  },
+  "homepage": "https://github.com/telemedotio/teleme-desktop#readme",
+  "devDependencies": {
+    "coffeescript": "^2.3.2",
+    "nw-builder": "^3.5.4",
+    "pug-cli": "^1.0.0-alpha6"
+  }
+}

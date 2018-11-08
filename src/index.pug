@@ -1,0 +1,42 @@
+head
+  meta(charset='utf-8')
+  title TeleMe Desktop
+  meta(http-equiv='Cache-Control' content='no-siteapp')
+  meta(http-equiv='Cache-Control' content='no-transform')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0')
+  meta(name='applicable-device' content='mobile')
+  meta(name='format-detection' content='telephone=no')
+  link(rel='stylesheet' href='./css/bootstrap.min.css')
+  link(rel='stylesheet' href='./css/ready.min.css?r=65eddefa39f11823eb11217b43744b30')
+body
+  #app
+    .wrapper(data-reactroot='' style='background: rgb(242, 243, 248);')
+      .main-header(style='background: transparent; border-bottom: 0px;')
+        .logo-header.mt-3
+          .logo
+            img(src='./images/logo.png' style='height: 30px; width: auto;')
+          button.topbar-toggler.more
+            i.la.la-ellipsis-v
+        nav.navbar.navbar-header.navbar-expand-lg
+          .container-fluid
+            ul.navbar-nav.topbar-nav.ml-md-auto.align-items-center
+              li
+                a.btn.btn-outline-secondary(href='https://t.me/telemedotio' target='_blank' style='border: 0px; line-height: 36px;') Help Desk
+      .container.h-100
+        .row.h-100.justify-content-center.align-items-center
+          .p-3.card.card-body(style='max-width: 588px;')
+            h5.text-center.my-3.card-title Please login
+            .text-center.m-3(style='display: block;')
+              content
+            p.mb-2.card-text
+              | TeleMe is integrated with Telegram Secure ID to provide seamless automation of group management services. Learn more about
+              a.text-muted(href='https://telegram.org/blog/login' target='_blank') Telegram Login
+            p.mb-2.card-text
+              | Have problem with login?
+              a(href='https://t.me/telemedotio' target='_blank') Click here to contact helpdesk.
+              | v2.2.0.q
+
+
+  link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i')
+
