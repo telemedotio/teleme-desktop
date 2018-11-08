@@ -11,7 +11,7 @@
   "version": "1.0.0",
   "description": "Desktop app for teleme.io - Telegram Community Management Tools",
   "main": "index.html",
-  "user-agent":"%name %ver %osinfo %webkit_ver %chromium_ver %nwver",
+  "user-agent":"Mozilla/5.0(%osinfo; %webkit_ver) TeleMeDesktop/%ver Chrome/%chromium_ver Nw/%nwver",
   "author": "teleme.io"
 }
 

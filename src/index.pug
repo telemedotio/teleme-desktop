@@ -26,17 +26,17 @@ body
       .container.h-100
         .row.h-100.justify-content-center.align-items-center
           .p-3.card.card-body(style='max-width: 588px;')
-            h5.text-center.my-3.card-title Please login
-            .text-center.m-3(style='display: block;')
-              content
-            p.mb-2.card-text
-              | TeleMe is integrated with Telegram Secure ID to provide seamless automation of group management services. Learn more about
-              a.text-muted(href='https://telegram.org/blog/login' target='_blank') Telegram Login
-            p.mb-2.card-text
-              | Have problem with login?
-              a(href='https://t.me/telemedotio' target='_blank') Click here to contact helpdesk.
-              | v2.2.0.q
+            h5#ELTitle.text-center.my-3.card-title Connecting to server...
+            p#ELLabelUp.mb-2.card-text
+            p#ELLabelDown.mb-2.card-text
 
+    .fixed-bottom.w-100.text-center.text-muted.pb-2
+      | Copyright 2018 TeleMe, Inc. All rights reserved.
+      a.ml-2.text-muted(href="http://teleme.io" target="_blank") www.teleme.io
 
+  script(type='text/javascript' src='./js/jquery-3.3.1.min.js')
+  script(type='text/javascript' src='./app.js?r='+Date.now())
   link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i')
+
+
 
