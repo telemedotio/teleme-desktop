@@ -63,5 +63,9 @@ typings/
 .DS_Store
 package-lock.json
 dist/
+<<<<<<< HEAD
 build/
+=======
+
 .idea/
+>>>>>>> 0bff58b49a0c05107b46d54dfebdbc3fdd16e107
