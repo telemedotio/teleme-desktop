@@ -2,13 +2,15 @@
   "name": "teleme-desktop",
   "version": "1.0.1",
   "description": "Desktop app for teleme.io - Telegram Community Management Tools, supports Windows, Mac and Linux",
-  "main": "main.js",
+  "main": "index.html",
   "scripts": {
     "watch": "./node_modules/.bin/coffee -o ./lib/ -cw ./src/",
     "pug": "./node_modules/.bin/pug src --out lib -w",
     "start": "/Applications/nwjs.app/Contents/MacOS/nwjs ./lib/",
     "start-electron": "node_modules/.bin/electron ./lib/",
-    "build": "build --mac --x64 .",
+    "build-win32": "build --win --x86  --mirror https://npm.taobao.org/mirrors/nwjs/ ./lib/",
+    "build-win64": "build --win --x64  --mirror https://npm.taobao.org/mirrors/nwjs/ ./lib/",
+    "build-mac": "build --mac --x64  --mirror https://npm.taobao.org/mirrors/nwjs/ ./lib/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
