@@ -13,6 +13,7 @@
     "build-win64": "export https_proxy=http://127.0.0.1:8123; build --win --x64 ./lib/",
     "build-mac": "export https_proxy=http://127.0.0.1:8123; build --mac --x64 ./lib/",
     "build-mac-mirror": "export https_proxy=http://127.0.0.1:8123; build --mac --x64  --mirror https://npm.taobao.org/mirrors/nwjs/ ./lib/",
+    "make-dmg" : "./node_modules/.bin/create-dmg dist/TeleMe\ Desktop\ 1.0.0\ mac\ x64/TeleMe\ Desktop.app build/releases",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -70,8 +71,9 @@
   },
   "devDependencies": {
     "coffeescript": "^2.3.2",
-    "pug-cli": "^1.0.0-alpha6",
+    "create-dmg": "^3.2.0",
     "nwjs-builder-phoenix": "^1.9.3",
+    "pug-cli": "^1.0.0-alpha6",
     "typescript": "^2.2.1"
   }
 }
