@@ -1,14 +1,17 @@
 {
   "name": "teleme-desktop",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Desktop app for teleme.io - Telegram Community Management Tools, supports Windows, Mac and Linux",
-  "main": "main.js",
+  "main": "index.html",
   "scripts": {
     "watch": "./node_modules/.bin/coffee -o ./lib/ -cw ./src/",
     "pug": "./node_modules/.bin/pug src --out lib -w",
     "start": "/Applications/nwjs.app/Contents/MacOS/nwjs ./lib/",
 	"start-win":"C:\\Users\\IEUser\\Downloads\\nwjs-v0.34.2-win-x64\\nw ./lib/",
     "start-electron": "node_modules/.bin/electron ./lib/",
+    "build-win32": "build --win --x86  --mirror https://npm.taobao.org/mirrors/nwjs/ ./lib/",
+    "build-win64": "build --win --x64  --mirror https://npm.taobao.org/mirrors/nwjs/ ./lib/",
+    "build-mac": "build --mac --x64  --mirror https://npm.taobao.org/mirrors/nwjs/ ./lib/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,6 +21,9 @@
   "keywords": [
     "telegram",
     "teleme",
+    "telegram bot api",
+    "chatbot",
+    "telegraf",
     "management"
   ],
   "author": "TeleMe.io",
@@ -26,9 +32,45 @@
     "url": "https://github.com/telemedotio/teleme-desktop/issues"
   },
   "homepage": "https://github.com/telemedotio/teleme-desktop#readme",
+  "build": {
+    "appId": "io.teleme.desktop",
+    "nwVersion": "0.14.7",
+    "packed": true,
+    "targets": [
+      "zip",
+      "nsis7z"
+    ],
+    "strippedProperties": [
+      "build"
+    ],
+    "outputPattern": "${NAME} ${VERSION} ${PLATFORM} ${ARCH}",
+    "win": {
+      "productName": "TeleMe Desktop",
+      "companyName": "teleme.io",
+      "copyright": "copyright",
+      "icon": "./assets/teleme.ico"
+    },
+    "mac": {
+      "displayName": "TeleMe Desktop",
+      "copyright": "copyright",
+      "icon": "./assets/teleme.icns",
+      "plistStrings": {
+        "CFBundleIdentifier": "io.teleme.desktop.modified",
+        "CFBundleDocumentTypes": []
+      }
+    },
+    "nsis": {
+      "installDirectory": "$PROGRAMFILES\\${_COMPANYNAME}\\${_APPNAME}",
+      "diffUpdaters": true
+    }
+  },
+  "window": {
+    "icon": "./assets/teleme.png"
+  },
   "devDependencies": {
     "coffeescript": "^2.3.2",
-    "nw-builder": "^3.5.4",
-    "pug-cli": "^1.0.0-alpha6"
+    "pug-cli": "^1.0.0-alpha6",
+    "nwjs-builder-phoenix": "^1.9.3",
+    "typescript": "^2.2.1"
   }
 }
