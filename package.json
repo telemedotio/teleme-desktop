@@ -1,6 +1,6 @@
 {
   "name": "teleme-desktop",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Desktop app for teleme.io - Telegram Community Management Tools, supports Windows, Mac and Linux",
   "main": "main.js",
   "scripts": {
@@ -17,6 +17,9 @@
   "keywords": [
     "telegram",
     "teleme",
+    "telegram bot api",
+    "chatbot",
+    "telegraf",
     "management"
   ],
   "author": "TeleMe.io",
