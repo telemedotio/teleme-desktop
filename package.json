@@ -7,6 +7,7 @@
     "watch": "./node_modules/.bin/coffee -o ./lib/ -cw ./src/",
     "pug": "./node_modules/.bin/pug src --out lib -w",
     "start": "/Applications/nwjs.app/Contents/MacOS/nwjs ./lib/",
+	"start-win":"C:\\Users\\IEUser\\Downloads\\nwjs-v0.34.2-win-x64\\nw ./lib/",
     "start-electron": "node_modules/.bin/electron ./lib/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
