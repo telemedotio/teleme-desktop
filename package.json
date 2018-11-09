@@ -1,6 +1,6 @@
 {
   "name": "teleme-desktop",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Desktop app for teleme.io - Telegram Community Management Tools, supports Windows, Mac and Linux",
   "main": "index.html",
   "scripts": {
@@ -13,7 +13,7 @@
     "build-win64": "export https_proxy=http://127.0.0.1:8123; build --win --x64 ./lib/",
     "build-mac": "export https_proxy=http://127.0.0.1:8123; build --mac --x64 ./lib/",
     "build-mac-mirror": "export https_proxy=http://127.0.0.1:8123; build --mac --x64  --mirror https://npm.taobao.org/mirrors/nwjs/ ./lib/",
-    "make-dmg" : "./node_modules/.bin/create-dmg dist/TeleMe\ Desktop\ 1.0.0\ mac\ x64/TeleMe\ Desktop.app build/releases",
+    "make-dmg" : "./node_modules/.bin/create-dmg dist/TeleMe\\ Desktop\\ 1.0.2\\ mac\\ x64/TeleMe\\ Desktop.app build/releases",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
