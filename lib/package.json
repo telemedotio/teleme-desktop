@@ -7,12 +7,45 @@
     "resizable" : false,
     "fullscreen" : false,
     "frame" : false,
-    "toolbar": false
+    "toolbar": false,
+    "icon": "./assets/teleme.png"
   },
   "version": "1.0.0",
   "description": "Desktop app for teleme.io - Telegram Community Management Tools",
   "main": "index.html",
   "user-agent":"Mozilla/5.0(%osinfo; %webkit_ver) TeleMeDesktop/%ver Chrome/%chromium_ver Nw/%nwver",
+  "build": {
+    "appId": "io.teleme.desktop",
+    "nwVersion": "0.34.2",
+    "packed": true,
+    "targets": [
+      "zip",
+      "nsis7z"
+    ],
+    "strippedProperties": [
+      "build"
+    ],
+    "outputPattern": "${NAME} ${VERSION} ${PLATFORM} ${ARCH}",
+    "win": {
+      "productName": "TeleMe Desktop",
+      "companyName": "teleme.io",
+      "copyright": "copyright",
+      "icon": "./assets/teleme.ico"
+    },
+    "mac": {
+      "displayName": "TeleMe Desktop",
+      "copyright": "copyright",
+      "icon": "./assets/teleme.icns",
+      "plistStrings": {
+        "CFBundleIdentifier": "io.teleme.desktop.modified",
+        "CFBundleDocumentTypes": []
+      }
+    },
+    "nsis": {
+      "installDirectory": "$PROGRAMFILES\\${_COMPANYNAME}\\${_APPNAME}",
+      "diffUpdaters": true
+    }
+  },
   "author": "teleme.io"
 }
 

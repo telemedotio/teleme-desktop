@@ -8,9 +8,10 @@
     "pug": "./node_modules/.bin/pug src --out lib -w",
     "start": "/Applications/nwjs.app/Contents/MacOS/nwjs ./lib/",
     "start-electron": "node_modules/.bin/electron ./lib/",
-    "build-win32": "build --win --x86  --mirror https://npm.taobao.org/mirrors/nwjs/ ./lib/",
-    "build-win64": "build --win --x64  --mirror https://npm.taobao.org/mirrors/nwjs/ ./lib/",
-    "build-mac": "build --mac --x64  --mirror https://npm.taobao.org/mirrors/nwjs/ ./lib/",
+    "build-win32": "export https_proxy=http://127.0.0.1:8123; build --win --x86 ./lib/",
+    "build-win64": "export https_proxy=http://127.0.0.1:8123; build --win --x64 ./lib/",
+    "build-mac": "export https_proxy=http://127.0.0.1:8123; build --mac --x64 ./lib/",
+    "build-mac-mirror": "export https_proxy=http://127.0.0.1:8123; build --mac --x64  --mirror https://npm.taobao.org/mirrors/nwjs/ ./lib/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
