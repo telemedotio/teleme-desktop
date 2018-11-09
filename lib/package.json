@@ -10,7 +10,7 @@
     "toolbar": false,
     "icon": "./assets/teleme.png"
   },
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Desktop app for teleme.io - Telegram Community Management Tools",
   "main": "index.html",
   "user-agent":"Mozilla/5.0(%osinfo; %webkit_ver) TeleMeDesktop/%ver Chrome/%chromium_ver Nw/%nwver",

@@ -274,15 +274,17 @@ openupTeleme = ->
     "frame" : true
 
   nw.Window.open URL_TO_TELEME_WEB, options, (newWin)->
-    newWin.on 'new-win-policy', (frame, url, policy)->
+    #newWin.on 'new-win-policy', (frame, url, policy)->
 
-      return if url.indexOf("oauth.telegram") > 0
+      #alert "url:#{url}"
+      #return if url.indexOf("oauth.telegram") > 0
 
-      # do not open the window
-      policy.ignore()
-      # and open it in external browser
-      nw.Shell.openExternal(url)
-      return
+      #alert "url:#{url}, openExternal"
+      ## do not open the window
+      #policy.ignore()
+      ## and open it in external browser
+      #nw.Shell.openExternal(url)
+      #return
 
     window.close(true)
     return
@@ -328,6 +330,7 @@ $(document).ready ->
   reinstateNodes(main)
 
   nw and nw.Window.get().on 'new-win-policy', (frame, url, policy)->
+    #alert "DOWN url:#{url}"
     # do not open the window
     policy.ignore()
     # and open it in external browser
