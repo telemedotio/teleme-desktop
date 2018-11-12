@@ -1,4 +1,4 @@
-# TeleMe Desktop
+# TeleMe Desktop a.k.a Telegram Group Bot
 
 Desktop application for [teleme.io - Telegram group management & analytics bot software](https://www.teleme.io), supports Windows, Mac and Linux
 
