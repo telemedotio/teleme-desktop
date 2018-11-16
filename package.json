@@ -12,6 +12,7 @@
     "build-win32": "export https_proxy=http://127.0.0.1:8123; build --win --x86 ./lib/",
     "build-win64": "export https_proxy=http://127.0.0.1:8123; build --win --x64 ./lib/",
     "build-mac": "export https_proxy=http://127.0.0.1:8123; build --mac --x64 ./lib/",
+    "build-linux": "export https_proxy=http://127.0.0.1:8123; build --linux --x64 ./lib/",
     "build-mac-mirror": "export https_proxy=http://127.0.0.1:8123; build --mac --x64  --mirror https://npm.taobao.org/mirrors/nwjs/ ./lib/",
     "make-dmg" : "./node_modules/.bin/create-dmg dist/TeleMe\\ Desktop\\ 1.0.2\\ mac\\ x64/TeleMe\\ Desktop.app build/releases",
     "test": "echo \"Error: no test specified\" && exit 1"
